@@ -4,9 +4,11 @@ import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
-import ThemeSwitcher from './theme-switcher';
-import { Button } from './ui/button';
+import HireMeModal from '@/components/hire-me-modal';
+import IndigoButton from '@/components/indigo-button';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import ThemeSwitcher from './theme-switcher';
 
 const AppHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -38,7 +40,7 @@ const AppHeader = () => {
             size={'icon'}
             className="focus:outline-none sm:hidden text-3xl"
           >
-            {showMenu ? <X size={36}/> : <Menu size={36}/>}
+            {showMenu ? <X size={36} /> : <Menu size={36} />}
           </Button>
         </div>
 
@@ -79,12 +81,12 @@ const AppHeader = () => {
           </Link>
 
           <div className="border-t-2 pt-3 sm:pt-0 border-primary-light dark:border-secondary-dark">
-            <Button
+            <IndigoButton
               onClick={toggleHireModal}
-              className="sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
+              className="sm:hidden block text-left text-md shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
             >
               Hire me
-            </Button>
+            </IndigoButton>
           </div>
         </div>
 
@@ -114,12 +116,12 @@ const AppHeader = () => {
 
         <div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
           <div className="hidden md:flex">
-            <Button className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300">
-              Hire Me
-            </Button>
+            <IndigoButton onClick={toggleHireModal}>Hire Me</IndigoButton>
           </div>
           <ThemeSwitcher />
         </div>
+
+        <HireMeModal open={showHireMe} toggle={toggleHireModal} />
       </div>
     </div>
   );
