@@ -1,7 +1,7 @@
-import React from 'react';
+import { IProject } from '@/constants/projectData';
 
-const SingleProjectPage = () => {
-  return <div>SingleProjectPage</div>;
+const SingleProject = ({ project }: { project: IProject }) => {
+  return <div>SingleProject</div>;
 };
 
-export default SingleProjectPage;
+export default SingleProject;

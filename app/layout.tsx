@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 
 import AppHeader from '@/components/app-header';
 import { ThemeProvider } from '@/components/theme-provider';
+import AppFooter from '@/components/app-footer';
 
 import './globals.css';
 
@@ -27,10 +28,12 @@ export default function RootLayout({
           enableSystem
           // disableTransitionOnChange
         >
-          <div className="bg-secondary-light dark:bg-primary-dark transition-all duration-300 h-screen">
+          <div className="bg-secondary-light dark:bg-primary-dark transition-all duration-300 min-h-screen h-full">
             <AppHeader />
 
-            {children}
+            <div className="container mx-auto">{children}</div>
+
+            <AppFooter />
           </div>
         </ThemeProvider>
       </body>
