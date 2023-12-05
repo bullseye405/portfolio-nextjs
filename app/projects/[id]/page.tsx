@@ -1,7 +1,7 @@
-import { IProject } from '@/constants/projectData';
+import ProjectDetail from './components/project-details';
 
-const SingleProject = ({ project }: { project: IProject }) => {
-  return <div>SingleProject</div>;
+const SingleProject = () => {
+  return <ProjectDetail />;
 };
 
 export default SingleProject;

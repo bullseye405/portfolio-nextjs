@@ -29,7 +29,7 @@ const AppHeader = () => {
       <div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
         <div className="flex justify-between items-center px-4 sm:px-0">
           <div>
-            <Link href={'/'}>Name</Link>
+            <Link href={'/'} className='text-3xl'>Samir Prajapati</Link>
           </div>
 
           <ThemeSwitcher smallScreen />
