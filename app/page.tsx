@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-import IntroSection from '@/components/core/IntroSection';
+import IntroSection from '@/app/components/IntroSection';
 import ProjectsPage from './projects/page';
 
 export default function Home() {
   return (
-    <div>
+    <div className="container mx-auto">
       <IntroSection />
       <ProjectsPage />
       <div className="mt-8 sm:mt-10 flex justify-center">

@@ -31,7 +31,7 @@ export default function RootLayout({
           <div className="bg-secondary-light dark:bg-primary-dark transition-all duration-300 min-h-screen h-full">
             <AppHeader />
 
-            <div className="container mx-auto">{children}</div>
+            {children}
 
             <AppFooter />
           </div>

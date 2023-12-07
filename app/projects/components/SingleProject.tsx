@@ -17,7 +17,7 @@ const SingleProject = ({ project }: { project: IProject }) => {
           alt={title}
           height={300}
           width={300}
-          className="rounded-t-xl border-none"
+          className="rounded-t-xl border-none w-full"
         />
 
         <div className="text-center px-4 py-6">
