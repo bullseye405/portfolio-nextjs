@@ -37,7 +37,7 @@ const IntroSection = () => {
       </div>
 
       <Image
-        src={theme === 'light' ? DeveloperImage : DeveloperImageDark}
+        src={theme === 'dark' ? DeveloperImageDark : DeveloperImage}
         alt="Developer"
         width={100}
         height={100}

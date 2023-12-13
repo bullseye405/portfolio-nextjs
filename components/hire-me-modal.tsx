@@ -86,7 +86,14 @@ const HireMeModal = ({ open, toggle }: IHireMeModal) => {
         toggle();
       }}
     >
-      <DialogContent className="sm:max-w-md">
+      <DialogContent
+        className="
+          sm:max-w-md
+          bg-secondary-light
+          dark:bg-primary-dark
+          max-h-screen
+        "
+      >
         <DialogHeader>
           <DialogTitle>What projects are you looking for?</DialogTitle>
         </DialogHeader>
@@ -188,11 +195,7 @@ const HireMeModal = ({ open, toggle }: IHireMeModal) => {
                   Cancel
                 </Button>
               </DialogClose>
-              <IndigoButton
-                type="submit"
-              >
-                Send Request
-              </IndigoButton>
+              <IndigoButton type="submit">Send Request</IndigoButton>
             </DialogFooter>
           </form>
         </Form>
