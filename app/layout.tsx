@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 import AppHeader from '@/components/app-header';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -32,7 +33,7 @@ export default function RootLayout({
             <AppHeader />
 
             {children}
-
+            <Analytics />
             <AppFooter />
           </div>
         </ThemeProvider>
