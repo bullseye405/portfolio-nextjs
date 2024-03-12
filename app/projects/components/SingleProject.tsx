@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const SingleProject = ({ project }: { project: IProject }) => {
-  const { id, category, title, img, ProjectHeader } = project;
+  const { id, category, title, img } = project;
   return (
     <Link href={`/projects/${id}`} aria-label="Single Project">
       <div
