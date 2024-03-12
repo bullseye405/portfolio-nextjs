@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="container mx-auto">
       <IntroSection />
-      <ProjectsPage />
+      <ProjectsPage isHomePage />
       <div className="mt-8 sm:mt-10 flex justify-center">
         <Link
           href={'/projects'}
