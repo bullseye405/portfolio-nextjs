@@ -5,7 +5,7 @@ const socialLinks = [
   {
     id: 1,
     icon: <Globe />,
-    url: 'https://www.stoman.me/',
+    url: 'https://samir-prajapati.carrd.co/',
   },
   {
     id: 2,
@@ -22,11 +22,11 @@ const socialLinks = [
     icon: <Linkedin />,
     url: 'https://www.linkedin.com/in/samir-prajapati-b9b589174',
   },
-  {
-    id: 5,
-    icon: <Youtube />,
-    url: 'https://www.youtube.com/c/bullseye405',
-  },
+  // {
+  //   id: 5,
+  //   icon: <Youtube />,
+  //   url: 'https://www.youtube.com/c/bullseye405',
+  // },
 ];
 
 const AppFooter = () => {
