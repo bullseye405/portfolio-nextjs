@@ -6,8 +6,8 @@ const About = () => {
   return (
     <div>
       <Bio />
-      <Counters />
-      <Clients />
+      {/* <Counters /> */}
+      {/* <Clients /> */}
     </div>
   );
 };

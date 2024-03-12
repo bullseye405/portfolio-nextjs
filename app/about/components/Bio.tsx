@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { aboutMeData } from './aboutMe';
+import { aboutMeData } from '../../../constants/aboutMe';
 
-const profileImage = '/images/profile.jpeg';
+const profileImage = '/images/profile/profile.png';
 
 const Bio = () => {
   return (
