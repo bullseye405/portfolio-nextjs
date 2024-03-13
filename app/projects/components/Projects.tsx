@@ -13,6 +13,8 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { projectsData } from '@/constants/projectData';
+import { portfolioItems } from '@/constants/portfolio';
+import Image from 'next/image';
 
 const selectOptions = [
   'Web Application',
@@ -118,6 +120,22 @@ const Projects = ({ isHomePage }: ProjectProps) => {
         >
           {projectsData.map((project) => (
             <SingleProject key={project.id} project={project} />
+          ))}
+
+          {portfolioItems.map((item, key) => (
+            <div key={key}>
+              <div>{item.title}</div>
+              {item.attachments.map((attachment, key1) => (
+                <div key={key1}>
+                  <Image
+                    width={200}
+                    height={200}
+                    alt={attachment.text}
+                    src={attachment.url}
+                  />
+                </div>
+              ))}
+            </div>
           ))}
         </div>
       </section>

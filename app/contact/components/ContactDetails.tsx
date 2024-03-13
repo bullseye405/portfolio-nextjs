@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 const contacts = [
   {
     id: 1,
-    name: 'Ason, Kathmandu, Nepal',
+    name: 'Ason, Kathmandu, Nepal (UTC+05:45)',
     icon: <MapPin />,
   },
   {
@@ -16,6 +16,7 @@ const contacts = [
   //   name: '1234567890',
   //   icon: <Phone />,
   // },
+  
 ];
 
 const ContactDetails = () => {
