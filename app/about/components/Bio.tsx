@@ -9,8 +9,8 @@ const Bio = () => {
       <div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
         <div className="w-full sm:w-1/4 mb-7 sm:mb-0">
           <Image
-            height={50}
-            width={50}
+            height={400}
+            width={400}
             alt="Profile Image"
             src={profileImage}
             className="rounded-lg w-96"
