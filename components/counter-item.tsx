@@ -2,9 +2,15 @@ interface ICounterItem {
   title: string;
   counter: JSX.Element;
   measurement?: string;
+  currency?: string;
 }
 
-const CounterItem = ({ title, counter, measurement }: ICounterItem) => {
+const CounterItem = ({
+  title,
+  counter,
+  measurement,
+  currency = '',
+}: ICounterItem) => {
   return (
     <div className="mb-20 sm:mb-0">
       <h2
@@ -13,7 +19,7 @@ const CounterItem = ({ title, counter, measurement }: ICounterItem) => {
       text-secondary-dark dark:text-secondary-light
       "
       >
-        {counter} {measurement}
+        {currency} {counter} {measurement}
       </h2>
       <span
         className="

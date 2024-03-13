@@ -11,11 +11,11 @@ const contacts = [
     name: 'bullseye405@gmail.com',
     icon: <Mail />,
   },
-  {
-    id: 3,
-    name: '9840054758',
-    icon: <Phone />,
-  },
+  // {
+  //   id: 3,
+  //   name: '1234567890',
+  //   icon: <Phone />,
+  // },
 ];
 
 const ContactDetails = () => {
