@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 import IntroSection from '@/app/components/IntroSection';
-import ProjectsPage from './projects/page';
+import Projects from './projects/components/Projects';
 
 export default function Home() {
   return (
     <div className="container mx-auto">
       <IntroSection />
-      <ProjectsPage isHomePage />
+      <Projects isHomePage />
       <div className="mt-8 sm:mt-10 flex justify-center">
         <Link
           href={'/projects'}
