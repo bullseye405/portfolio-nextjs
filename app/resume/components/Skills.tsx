@@ -138,20 +138,23 @@ const skills = [
 // Slider component
 const SkillsSlider = () => {
   return (
-    <div className="p-4 bg-white shadow-md rounded-lg mt-4">
-      <h2 className="text-xl font-semibold mb-4">Skills</h2>
-      <div className="overflow-hidden flex flex-wrap gap-12 justify-center items-center">
+    <div className="p-6 bg-white shadow-lg rounded-lg mt-6">
+      <h2 className="text-2xl font-semibold text-gray-800 mb-6">Skills</h2>
+      <div className="overflow-hidden flex flex-wrap gap-6 justify-center">
         {skills
           .sort((a, b) => a.order - b.order)
           .map((skill) => (
-            <div key={skill.order} className="px-2">
+            <div
+              key={skill.order}
+              className="flex items-center justify-center p-2"
+            >
               <a href={skill.url} target="_blank" rel="noopener noreferrer">
                 <Image
                   src={skill.logo_url}
                   alt={skill.name}
                   width={80}
                   height={80}
-                  className="rounded-md"
+                  className="rounded-md transition-transform duration-300 hover:scale-110"
                 />
               </a>
             </div>

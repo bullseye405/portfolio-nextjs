@@ -68,30 +68,37 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <div className="p-4 bg-white shadow-md rounded-lg mt-4">
-      <div className="mb-4">
-        <h2 className="text-xl font-semibold">Experience</h2>
+    <div className="p-6 bg-white shadow-lg rounded-lg mt-6">
+      <div className="mb-6">
+        <h2 className="text-2xl font-bold text-gray-800">Experience</h2>
       </div>
       <div className="relative">
         {experiences.map((experience, index) => (
-          <div key={index} className="flex items-start mb-8">
-            <div className="w-1/4 text-right pr-4">
-              <div className="text-gray-600 font-medium">{experience.date}</div>
+          <div
+            key={index}
+            className="flex flex-col md:flex-row items-start mb-12 relative"
+          >
+            <div className="md:w-1/4 md:text-right md:pr-6 mb-4 md:mb-0">
+              <div className="text-gray-600 font-medium text-sm">
+                {experience.date}
+              </div>
             </div>
-            <div className="w-3/4 pl-4">
-              <div className="font-semibold text-lg">{experience.title}</div>
-              <div className="text-gray-700 mb-2">
+            <div className="md:w-3/4 md:pl-6">
+              <div className="font-semibold text-xl text-gray-900">
+                {experience.title}
+              </div>
+              <div className="text-gray-700 text-sm mb-3">
                 {experience.company}
                 {experience.location ? `, ${experience.location}` : ''}
               </div>
-              <ul className="list-none pl-0 space-y-2">
+              <ul className="list-disc list-inside space-y-2 text-sm text-gray-600">
                 {experience.responsibilities.map((responsibility, idx) => (
                   <li key={idx}>{responsibility}</li>
                 ))}
               </ul>
             </div>
             {index < experiences.length - 1 && (
-              <div className="absolute w-0.5 bg-gray-300 top-0 left-1/4 h-full"></div>
+              <div className="hidden md:block absolute top-0 left-1/4 w-0.5 bg-gray-300 h-full"></div>
             )}
           </div>
         ))}

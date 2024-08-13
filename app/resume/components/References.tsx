@@ -18,25 +18,25 @@ const references = [
 
 const References = () => {
   return (
-    <div className="p-4 bg-white shadow-md rounded-lg mt-4">
-      <h2 className="text-xl font-semibold mb-6">References</h2>
-      <div className="space-y-4">
+    <div className="p-6 bg-white shadow-lg rounded-lg mt-6">
+      <h2 className="text-2xl font-semibold text-gray-800 mb-6">References</h2>
+      <div className="space-y-6">
         {references.map((ref, index) => (
           <div
             key={index}
-            className="p-4 border border-gray-200 rounded-lg shadow-sm"
+            className="p-4 border border-gray-300 rounded-lg shadow-md"
           >
-            <h3 className="text-lg font-semibold">{ref.name}</h3>
-            <p className="text-sm text-gray-600">{ref.position}</p>
-            <p className="text-sm text-gray-600">
+            <h3 className="text-lg font-semibold text-gray-900">{ref.name}</h3>
+            <p className="text-sm text-gray-700">{ref.position}</p>
+            <p className="text-sm text-gray-700">
               <a
                 href={`mailto:${ref.email}`}
-                className="text-blue-500 hover:underline"
+                className="text-blue-600 hover:underline"
               >
                 {ref.email}
               </a>
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-700">
               Relationship: {ref.relationship}
             </p>
           </div>
