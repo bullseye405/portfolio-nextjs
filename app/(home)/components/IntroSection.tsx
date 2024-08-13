@@ -1,26 +1,28 @@
 'use client';
 
-import { Download } from 'lucide-react';
+import { FileText } from 'lucide-react';
 import Image from 'next/image';
 
 import { useTheme } from 'next-themes';
+import { useRouter } from 'next/navigation';
 
 const DeveloperImage = '/images/developer.svg';
 const DeveloperImageDark = '/images/developer-dark.svg';
 
 const IntroSection = () => {
   const { theme } = useTheme();
+  const router = useRouter();
 
-  const handleClick = async () => {
-    const response = await fetch('/api/file');
-    const blob = await response.blob();
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'samir_prajapati_resume.pdf';
-    link.click();
-    window.URL.revokeObjectURL(url);
-  };
+  // const handleClick = async () => {
+  //   const response = await fetch('/api/file');
+  //   const blob = await response.blob();
+  //   const url = window.URL.createObjectURL(blob);
+  //   const link = document.createElement('a');
+  //   link.href = url;
+  //   link.download = 'samir_prajapati_resume.pdf';
+  //   link.click();
+  //   window.URL.revokeObjectURL(url);
+  // };
 
   return (
     <div className="flex flex-col sm:justify-between items-center sm:flex-row mt-12 md:mt-2">
@@ -35,7 +37,9 @@ const IntroSection = () => {
 
         <div className="flex justify-center sm:block">
           <a
-            onClick={handleClick}
+            onClick={() => {
+              router.push('/resume');
+            }}
             aria-label="download resume"
             className="flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 
             text-lg border border-indigo dark:border-ternary-dark 
@@ -44,8 +48,8 @@ const IntroSection = () => {
             cursor-pointer
             "
           >
-            <Download className="mr-2 sm:mr-3 h-5 w-5 sm:w-6 sm:h-6 duration-100" />
-            <span className="text-sm sm:text-lg duration-100">Download CV</span>
+            <FileText className="mr-2 sm:mr-3 h-5 w-5 sm:w-6 sm:h-6 duration-100" />
+            <span className="text-sm sm:text-lg duration-100">Resume</span>
           </a>
         </div>
       </div>

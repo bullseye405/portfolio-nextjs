@@ -1,9 +1,13 @@
 import Link from 'next/link';
 
-import IntroSection from '@/app/components/IntroSection';
+import IntroSection from '@/app/(home)/components/IntroSection';
 import Projects from './projects/components/Projects';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 export default function Home() {
+
   return (
     <div className="container mx-auto">
       <IntroSection />

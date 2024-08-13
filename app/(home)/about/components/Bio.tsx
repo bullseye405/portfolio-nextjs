@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { aboutMeData } from '../../../constants/aboutMe';
+import { aboutMeData } from '../../../../constants/aboutMe';
 
 const profileImage = '/images/profile/profile.png';
 
