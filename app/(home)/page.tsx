@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import IntroSection from '@/app/components/IntroSection';
+import IntroSection from '@/app/(home)/components/IntroSection';
 import Projects from './projects/components/Projects';
 
 export default function Home() {

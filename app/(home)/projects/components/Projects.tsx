@@ -2,7 +2,7 @@
 import { Search } from 'lucide-react';
 import { useState } from 'react';
 
-import SingleProject from '@/app/projects/components/SingleProject';
+import SingleProject from '@/app/(home)/projects/components/SingleProject';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
