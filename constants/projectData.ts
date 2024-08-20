@@ -10,11 +10,8 @@ export interface IProject {
   title: string;
   img: string;
   category: string;
-  ProjectHeader?: {
-    title: string;
-    publishDate: string;
-    tags: string;
-  };
+  publishDate?: string;
+  tags?: string[];
 }
 
 export const projectsData: IProject[] = [
@@ -23,11 +20,8 @@ export const projectsData: IProject[] = [
     title: 'Google Health Platform',
     category: 'Web Application',
     img: WebImage2,
-    ProjectHeader: {
-      title: 'Project Management UI - From Context',
-      publishDate: 'Jul 26, 2021',
-      tags: 'UI / Frontend',
-    },
+    tags: ['UI / Frontend'],
+    publishDate: 'Jul 26, 2021',
   },
   {
     id: 2,
