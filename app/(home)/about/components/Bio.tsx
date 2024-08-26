@@ -1,11 +1,16 @@
+import prisma from '@/lib/db';
 import Image from 'next/image';
-import { aboutMeData } from '../../../../constants/aboutMe';
-
+import AboutMeForm from './Form';
+import { formatText } from '@/components/format-text';
 const profileImage = '/images/profile/profile.png';
 
-const Bio = () => {
+const Bio = async () => {
+  const profile = await prisma.userProfile.findFirst();
+
+  const isAdmin = process.env.NEXT_PUBLIC_USER_TYPE === 'admin';
   return (
     <div className="container mx-auto">
+      {isAdmin && <AboutMeForm profile={profile} />}
       <div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
         <div className="w-full sm:w-1/4 mb-7 sm:mb-0">
           <Image
@@ -19,16 +24,7 @@ const Bio = () => {
         </div>
 
         <div className="font-regular w-full sm:w-3/4 text-left">
-          {aboutMeData.map((item) => {
-            return (
-              <p
-                key={item.id}
-                className="mb-4 text-ternary-dark dark:text-ternary-light text-lg"
-              >
-                {item.bio}
-              </p>
-            );
-          })}
+          {profile && formatText(profile?.aboutMe)}
         </div>
       </div>
     </div>

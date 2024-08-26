@@ -16,13 +16,6 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
-model User {
-  id    String  @id @default(cuid())
-  email String  @unique
-  name  String?
-  post  Post[]
-}
-
 model Post {
   id        String  @id @default(cuid())
   title     String
@@ -36,29 +29,20 @@ model Post {
   createAt  DateTime @default(now()) @map("created_at")
 }
 
-model Project {
-  id          Int           @id @default(autoincrement())
-  title       String
-  img         String
-  category    String
-  publishDate DateTime?
-  tags        Tag[]         @relation("ProjectTags")
-  ProjectTags ProjectTags[]
+model User {
+  id      String       @id @default(cuid())
+  email   String       @unique
+  name    String?
+  post    Post[]
+  profile UserProfile?
 }
 
-model Tag {
-  id          Int           @id @default(autoincrement())
-  name        String        @unique
-  projects    Project[]     @relation("ProjectTags")
-  ProjectTags ProjectTags[]
-}
+model UserProfile {
+  id      String @id @default(cuid())
+  aboutMe String
+  summary String
+  userId  String @unique
+  user    User   @relation(fields: [userId], references: [id])
 
-model ProjectTags {
-  projectId Int
-  tagId     Int
-
-  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
-  tag     Tag     @relation(fields: [tagId], references: [id])
-
-  @@id([projectId, tagId])
+  @@map("user_profiles")
 }
