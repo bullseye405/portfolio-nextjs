@@ -7,15 +7,11 @@ import SkillsSlider from './components/Skills';
 import Summary from './components/Summary';
 
 const ResumePage = async () => {
-  const profile = await prisma.userProfile.findFirst();
-
   return (
     <div className="mx-2 my-2 md:mx-20 md:my-10">
       <Header />
 
-      {profile && (
-        <Summary summary={profile.summary} userId={profile.userId} />
-      )}
+      <Summary />
 
       <ExperienceSection />
 
