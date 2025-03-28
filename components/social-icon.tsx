@@ -8,7 +8,7 @@ type CommonSocialIcon =
   | 'Youtube';
 
 interface SocialIconProps extends LucideProps {
-  iconName: CommonSocialIcon;
+  iconName: CommonSocialIcon | string;
 }
 const SocialIcon = ({ iconName, ...rest }: SocialIconProps): JSX.Element => {
   switch (iconName) {
