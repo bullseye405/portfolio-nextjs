@@ -2,6 +2,7 @@ import { formatText } from '@/components/format-text';
 import prisma from '@/lib/db';
 import Image from 'next/image';
 import AboutMeForm from './Form';
+
 const profileImage = '/images/profile/profile.png';
 
 const Bio = async () => {

@@ -18,7 +18,7 @@ const references = [
 
 const References = () => {
   return (
-    <div className="p-6 bg-white shadow-lg rounded-lg mt-6">
+    <div className="py-6">
       <h2 className="text-2xl font-semibold text-gray-800 mb-6">References</h2>
       <div className="space-y-6">
         {references.map((ref, index) => (

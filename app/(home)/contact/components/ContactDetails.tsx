@@ -1,3 +1,4 @@
+import { SOCIALS } from '@/constants/socialLinks';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
 const contacts = [
@@ -8,7 +9,7 @@ const contacts = [
   },
   {
     id: 2,
-    name: 'bullseye405@gmail.com',
+    name: SOCIALS.mail,
     icon: <Mail />,
   },
   // {

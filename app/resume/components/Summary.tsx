@@ -12,7 +12,7 @@ const Summary = async () => {
   }
 
   return (
-    <div className="p-6 bg-white shadow-lg rounded-lg mt-6">
+    <div className="py-6">
       <div className="mb-6">
         <h2 className="text-2xl font-semibold text-gray-800">Summary</h2>
       </div>

@@ -1,6 +1,4 @@
-import { Twitter, Facebook, Instagram, Linkedin, Youtube, LucideProps } from 'lucide-react';
-import { HtmlProps } from 'next/dist/shared/lib/html-context.shared-runtime';
-import { FC, HTMLProps, PropsWithChildren, ReactHTMLElement } from 'react';
+import { Facebook, Instagram, Linkedin, LucideProps, Twitter, Youtube } from 'lucide-react';
 
 type CommonSocialIcon =
   | 'Twitter'
@@ -10,7 +8,7 @@ type CommonSocialIcon =
   | 'Youtube';
 
 interface SocialIconProps extends LucideProps {
-  iconName: CommonSocialIcon | string;
+  iconName: CommonSocialIcon;
 }
 const SocialIcon = ({ iconName, ...rest }: SocialIconProps): JSX.Element => {
   switch (iconName) {
