@@ -1,33 +1,5 @@
-import { Github, Globe, Linkedin, Twitter, Youtube } from 'lucide-react';
+import { socialLinks } from '@/constants/socialLinks';
 import Link from 'next/link';
-
-const socialLinks = [
-  {
-    id: 1,
-    icon: <Globe />,
-    url: 'https://samir-prajapati.carrd.co/',
-  },
-  {
-    id: 2,
-    icon: <Github />,
-    url: 'https://github.com/bullseye405',
-  },
-  {
-    id: 3,
-    icon: <Twitter />,
-    url: 'https://twitter.com/bullseye405',
-  },
-  {
-    id: 4,
-    icon: <Linkedin />,
-    url: 'https://www.linkedin.com/in/samir-prajapati-b9b589174',
-  },
-  // {
-  //   id: 5,
-  //   icon: <Youtube />,
-  //   url: 'https://www.youtube.com/c/bullseye405',
-  // },
-];
 
 const AppFooter = () => {
   return (
@@ -54,7 +26,9 @@ const AppFooter = () => {
                     shadow-sm p-4 duration-300
                 "
               >
-                <i className="text-xl sm:text-2xl md:text-3xl">{link.icon}</i>
+                <i className="text-xl sm:text-2xl md:text-3xl">
+                  <link.icon />
+                </i>
               </Link>
             ))}
           </ul>

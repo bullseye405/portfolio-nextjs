@@ -138,7 +138,7 @@ const skills = [
 // Slider component
 const SkillsSlider = () => {
   return (
-    <div className="p-6 bg-white shadow-lg rounded-lg mt-6">
+    <div className="py-6">
       <h2 className="text-2xl font-semibold text-gray-800 mb-6">Skills</h2>
       <div className="overflow-hidden flex flex-wrap gap-6 justify-center">
         {skills

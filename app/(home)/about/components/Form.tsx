@@ -1,10 +1,10 @@
 'use client';
 
-import { Textarea } from '@/components/ui/textarea';
-import React, { useEffect, useState } from 'react';
-import { upsertAboutMe } from '../actions/upsertAboutMe';
 import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
 import { UserProfile } from '@prisma/client';
+import { useState } from 'react';
+import { upsertAboutMe } from '../actions/upsertAboutMe';
 
 const AboutMeForm = ({ profile }: { profile: UserProfile | null }) => {
   const [data, setData] = useState(profile?.aboutMe);

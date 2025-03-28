@@ -3,7 +3,7 @@ import { educationData } from './contants';
 
 const Education = () => {
   return (
-    <div className="p-4 bg-white shadow-md rounded-lg mt-4">
+    <div className="py-6">
       <h2 className="text-xl font-semibold mb-6">Education</h2>
       <div className="relative overflow-x-auto">
         <div className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">

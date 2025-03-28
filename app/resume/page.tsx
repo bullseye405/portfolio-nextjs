@@ -1,4 +1,3 @@
-import prisma from '@/lib/db';
 import Education from './components/Education';
 import ExperienceSection from './components/Experiences';
 import Header from './components/Header';
@@ -8,7 +7,7 @@ import Summary from './components/Summary';
 
 const ResumePage = async () => {
   return (
-    <div className="mx-2 my-2 md:mx-20 md:my-10">
+    <div className="mx-2 my-2 md:mx-20 md:my-10 bg-white shadow-md rounded-lg p-6">
       <Header />
 
       <Summary />
