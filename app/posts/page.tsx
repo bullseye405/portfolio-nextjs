@@ -3,6 +3,8 @@ import Link from 'next/link';
 import React from 'react';
 import CreatePostForm from './components/CreatePosts';
 
+export const dynamic = 'force-dynamic';
+
 const PostsPage = async () => {
   const posts = await prisma.post.findMany();
 

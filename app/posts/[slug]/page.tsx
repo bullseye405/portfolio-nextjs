@@ -1,9 +1,12 @@
 import prisma from '@/lib/db';
 import React from 'react';
 
-const PostPage = async ({ params }: { params: { slug: string } }) => {
+export const dynamic = 'force-dynamic';
+
+const PostPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
   const post = await prisma.post.findUnique({
-    where: { slug: params.slug },
+    where: { slug },
   });
 
   return (
