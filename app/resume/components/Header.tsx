@@ -22,7 +22,7 @@ const Header = () => {
           <h1 className="text-2xl font-semibold text-gray-800">
             Samir Prajapati
           </h1>
-          <p className="text-gray-600">Full Stack Developer</p>
+          <p className="text-gray-600">Software Engineer</p>
 
           <div className="flex justify-center md:justify-start space-x-4 mt-3">
             <a

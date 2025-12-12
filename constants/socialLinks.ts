@@ -28,6 +28,6 @@ export const socialLinks = [
   {
     id: 4,
     icon: Globe,
-    url: SOCIALS.carrdCo,
+    url: SOCIALS.upwork,
   },
 ];
