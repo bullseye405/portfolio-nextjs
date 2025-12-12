@@ -18,21 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          // disableTransitionOnChange
-        >
-          <div className="bg-secondary-light dark:bg-primary-dark transition-all duration-300 min-h-screen h-full">
-            <AppHeader />
-            {children}
-            <AppFooter />
-          </div>
-        </ThemeProvider>
-      </body>
-    </html>
+    <div className="bg-secondary-light dark:bg-primary-dark transition-all duration-300 min-h-screen h-full">
+      <AppHeader />
+      {children}
+      <AppFooter />
+    </div>
   );
 }
