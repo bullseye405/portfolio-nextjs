@@ -1,36 +1,62 @@
-import React from 'react';
-import { educationData } from './contants';
+const educationData = [
+  {
+    degree: "Bachelor's degree",
+    field: "Computer Science",
+    institution: "National College Of Computer Studies",
+    location: "Kathmandu",
+    startYear: "2015",
+    endYear: "2019",
+  },
+  {
+    degree: "Higher Secondary (+2)",
+    field: "Science",
+    institution: "Capitol Hill College",
+    location: "Kathmandu",
+    startYear: "2012",
+    endYear: "2014",
+  },
+  {
+    degree: "School",
+    field: "Secondary Education",
+    institution: "Saraswoti Boarding Higher Secondary School",
+    location: "Kathmandu",
+    startYear: "",
+    endYear: "2012",
+  },
+];
 
 const Education = () => {
   return (
-    <div className="py-6">
-      <h2 className="text-xl font-semibold mb-6">Education</h2>
-      <div className="relative overflow-x-auto">
-        <div className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
-          {educationData.map((edu, index) => (
-            <div key={index} className="w-full md:w-64">
-              <div className="h-full relative p-4 bg-gray-100 rounded-lg shadow-sm">
-                {/* <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-white p-2 rounded-full shadow-md">
-                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-              </div> */}
-                <h3 className="text-lg font-semibold">{edu.degree}</h3>
-                <p className="text-sm text-gray-700">{edu.field}</p>
-                <p className="text-sm text-gray-600">
-                  {edu.institution}, {edu.location}
-                </p>
-                {/* <p className="text-sm text-gray-600">
-                {edu.startDate} - {edu.endDate}
-              </p> */}
-                {edu.endYear && (
-                  <p className="text-sm text-gray-600">{edu.endYear}</p>
-                )}
-                {/* <p className="text-sm text-gray-600">{edu.gpa}</p> */}
-              </div>
-            </div>
-          ))}
-        </div>
+    <section className="py-10">
+      <h2 className="text-2xl font-bold text-gray-900 mb-8 tracking-tight">
+        Education
+      </h2>
+
+      <div className="grid gap-6 md:grid-cols-2">
+        {educationData.map((edu, index) => (
+          <div
+            key={index}
+            className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow"
+          >
+            <h3 className="text-lg font-semibold text-gray-900">
+              {edu.degree}
+            </h3>
+
+            <p className="text-gray-700 text-sm">{edu.field}</p>
+
+            <p className="text-gray-600 text-sm">
+              {edu.institution}, {edu.location}
+            </p>
+
+            <p className="text-sm font-medium text-gray-800 mt-1">
+              {edu.startYear
+                ? `${edu.startYear} – ${edu.endYear}`
+                : edu.endYear}
+            </p>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 
