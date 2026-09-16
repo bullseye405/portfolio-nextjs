@@ -44,14 +44,18 @@ const IntroSection = () => {
           A web developer based in Nepal
         </p>
 
-        <div className="flex justify-evenly gap-10">
+        <div className="flex justify-center sm:block">
           <Button
-            onClick={() => router.push('/resume')}
-            className="w-36 sm:w-48 mt-12 mb-6 sm:mb-0
-          text-gray-500 bg-indigo-50 border border-indigo 
-          hover:bg-indigo-500 hover:text-white
-          py-2.5 sm:py-3 shadow-lg rounded-lg 
-          text-sm sm:text-lg duration-500"
+            onClick={() => {
+              router.push('/resume');
+            }}
+            aria-label="download resume"
+            className="flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 
+            text-lg border border-indigo dark:border-ternary-dark 
+            py-2.5 sm:py-3 shadow-lg rounded-lg 
+            bg-indigo-50 focus:ring-1 focus:focus:ring-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500
+            cursor-pointer
+            "
           >
             Resume
           </Button>
