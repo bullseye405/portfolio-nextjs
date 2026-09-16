@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic';
 
 const ResumePage = async () => {
   return (
-    <div className="mx-2 my-2 md:mx-20 md:my-10 bg-white shadow-md rounded-lg p-6">
+    <div className="px-4 sm:px-6 lg:px-20 xl:px-32 2xl:px-56 bg-white min-h-screen py-4">
       <Header />
 
       <Summary />

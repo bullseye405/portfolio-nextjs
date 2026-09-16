@@ -13,8 +13,7 @@ const Counters = () => {
   return (
     <div className="mt-10 sm:mt-20 bg-primary-light dark:bg-ternary-dark shadow-sm">
       <div className="font-medium container mx-auto py-20 block sm:flex sm:justify-between items-center">
-
-      <CounterItem
+        <CounterItem
           title="Years of experience"
           counter={<span id="experienceCounter" />}
           measurement="+"
@@ -39,6 +38,29 @@ const Counters = () => {
           currency={'$'}
         />
 
+        {/* Full-Time Job Stats */}
+        {/* <div className="bg-primary-light dark:bg-ternary-dark shadow-sm p-8 rounded-lg">
+          <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
+            Full-Time Job Stats
+          </h3>
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+            <CounterItem
+              title="Years of experience"
+              counter={<span id="fullTimeExperience" />}
+              measurement="+"
+            />
+            <CounterItem
+              title="Projects Completed"
+              counter={<span id="fullTimeProjects" />}
+              measurement="+"
+            />
+            <CounterItem
+              title="Teams Worked With"
+              counter={<span id="fullTimeTeams" />}
+              measurement="+"
+            />
+          </div>
+        </div> */}
       </div>
     </div>
   );
