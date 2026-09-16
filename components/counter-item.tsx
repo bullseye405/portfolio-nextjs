@@ -1,6 +1,8 @@
+import { ReactElement } from 'react';
+
 interface ICounterItem {
   title: string;
-  counter: JSX.Element;
+  counter: ReactElement;
   measurement?: string;
   currency?: string;
 }

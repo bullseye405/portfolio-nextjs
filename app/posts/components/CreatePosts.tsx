@@ -1,6 +1,5 @@
 'use client';
 
-import prisma from '@/lib/db';
 import { useState } from 'react';
 import { createPostAction } from '../actions/createPosts';
 
@@ -10,20 +9,14 @@ export default function CreatePostForm() {
     content: '',
     slug: '',
     published: false,
-    authorId: 1,
   });
 
-  const handleChange = (e: any) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value, type, checked } = e.target as HTMLInputElement;
     setFormData({
       ...formData,
       [name]: type === 'checkbox' ? checked : value,
     });
-  };
-
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-    createPostAction(e);
   };
 
   return (
