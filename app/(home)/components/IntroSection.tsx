@@ -1,11 +1,10 @@
 'use client';
 
-import { useTheme } from 'next-themes';
+import { FileText } from 'lucide-react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
 
-import { Button } from '@/components/ui/button';
+import { useTheme } from 'next-themes';
+import { useRouter } from 'next/navigation';
 
 const DeveloperImage = '/images/developer.svg';
 const DeveloperImageDark = '/images/developer-dark.svg';
@@ -14,24 +13,16 @@ const IntroSection = () => {
   const { theme } = useTheme();
   const router = useRouter();
 
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true); // now client has mounted
-  }, []);
-
-  const handleClick = async () => {
-    const response = await fetch('/api/file');
-    const blob = await response.blob();
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'samir_prajapati_resume.pdf';
-    link.click();
-    window.URL.revokeObjectURL(url);
-  };
-
-  if (!mounted) return null; // render nothing until client mounts
+  // const handleClick = async () => {
+  //   const response = await fetch('/api/file');
+  //   const blob = await response.blob();
+  //   const url = window.URL.createObjectURL(blob);
+  //   const link = document.createElement('a');
+  //   link.href = url;
+  //   link.download = 'samir_prajapati_resume.pdf';
+  //   link.click();
+  //   window.URL.revokeObjectURL(url);
+  // };
 
   return (
     <div className="flex flex-col sm:justify-between items-center sm:flex-row mt-12 md:mt-2">
@@ -44,33 +35,27 @@ const IntroSection = () => {
           A web developer based in Nepal
         </p>
 
-        <div className="flex justify-evenly gap-10">
-          <Button
-            onClick={() => router.push('/resume')}
-            className="w-36 sm:w-48 mt-12 mb-6 sm:mb-0
-          text-gray-500 bg-indigo-50 border border-indigo 
-          hover:bg-indigo-500 hover:text-white
-          py-2.5 sm:py-3 shadow-lg rounded-lg 
-          text-sm sm:text-lg duration-500"
+        <div className="flex justify-center sm:block">
+          <a
+            onClick={() => {
+              router.push('/resume');
+            }}
+            aria-label="download resume"
+            className="flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 
+            text-lg border border-indigo dark:border-ternary-dark 
+            py-2.5 sm:py-3 shadow-lg rounded-lg 
+            bg-indigo-50 focus:ring-1 focus:focus:ring-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500
+            cursor-pointer
+            "
           >
-            Resume
-          </Button>
-
-          <Button
-            onClick={handleClick}
-            className="w-36 sm:w-48 mt-12 mb-6 sm:mb-0
-          text-gray-500 bg-indigo-50 border border-indigo 
-          hover:bg-indigo-500 hover:text-white
-          py-2.5 sm:py-3 shadow-lg rounded-lg 
-          text-sm sm:text-lg duration-500"
-          >
-            Download
-          </Button>
+            <FileText className="mr-2 sm:mr-3 h-5 w-5 sm:w-6 sm:h-6 duration-100" />
+            <span className="text-sm sm:text-lg duration-100">Resume</span>
+          </a>
         </div>
       </div>
 
       <Image
-        src={theme !== 'dark' ? DeveloperImageDark : DeveloperImage}
+        src={theme === 'dark' ? DeveloperImageDark : DeveloperImage}
         alt="Developer"
         width={100}
         height={100}

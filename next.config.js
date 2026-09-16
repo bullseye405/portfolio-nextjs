@@ -20,7 +20,6 @@ const nextConfig = {
       'www.postgresql.org',
       'openlayers.org',
       'leafletjs.com',
-      'upload.wikimedia.org',
     ],
   },
 };
