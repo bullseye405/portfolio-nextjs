@@ -3,15 +3,18 @@
 import prisma from '@/lib/db';
 import { revalidatePath } from 'next/cache';
 
-export const createPostAction = async (data: any) => {
-  console.log({ data: JSON.stringify(data) });
+export const createPostAction = async (formData: FormData) => {
+  const title = formData.get('title') as string;
+  const slug = formData.get('slug') as string;
+  const content = (formData.get('content') as string) || null;
+
   await prisma.post.create({
     data: {
-      title: data.get('title'),
-      slug: data.get('slug'),
-      content: data.get('content'),
+      title,
+      slug,
+      content,
     },
   });
 
-  revalidatePath('/posts')
+  revalidatePath('/posts');
 };

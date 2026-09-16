@@ -6,7 +6,7 @@ const IndigoButton = ({ className, ...rest }: ButtonProps) => {
   return (
     <Button
       className={cn(
-        'text-white bg-indigo-500 hover:bg-indigo-600 rounded-md focus-ring-indigo-900 duration-500',
+        'text-white bg-indigo-500 hover:bg-indigo-600 rounded-md focus:ring-indigo-900 duration-500',
         className
       )}
       {...rest}

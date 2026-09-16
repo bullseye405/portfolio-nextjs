@@ -1,4 +1,4 @@
-import { Github, Linkedin, MailIcon } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import Image from 'next/image';
 
 import { SOCIALS } from '@/constants/socialLinks';
@@ -32,7 +32,7 @@ const Header = () => {
               aria-label="Email"
               className="hover:text-blue-600 text-gray-600"
             >
-              <MailIcon className="w-5 h-5" />
+              <Mail className="w-5 h-5" />
             </a>
 
             <a
