@@ -1,11 +1,14 @@
 export const formatText = (text: string) => {
-  // Split the text into paragraphs based on double newlines
-  // const paragraphs = text.split(/\r?\n\s*\r?\n/);
-  const paragraphs = text.split(/\r\n/);
+  if (!text) return null;
 
-  // Wrap each paragraph in <p> tags
+  // Split by double newlines OR single newlines
+  const paragraphs = text.split(/\r?\n\r?\n|\r?\n/);
+
   return paragraphs.map((paragraph, index) => (
-    <p className="mb-4" key={index}>
+    <p
+      className="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed"
+      key={index}
+    >
       {paragraph}
     </p>
   ));

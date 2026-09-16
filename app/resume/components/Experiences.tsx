@@ -34,7 +34,7 @@ const ExperienceSection = async () => {
           return (
             <div
               key={index}
-              className="flex flex-col md:flex-row items-start mb-12 relative"
+              className="flex flex-col md:flex-row items-start relative pb-5"
             >
               <div className="md:w-1/4 md:text-right md:pr-6 mb-4 md:mb-0">
                 <div className="text-gray-600 font-medium text-sm">{date}</div>

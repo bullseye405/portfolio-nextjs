@@ -1,16 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'reactnative.dev' },
-      { protocol: 'https', hostname: 'redux.js.org' },
-      { protocol: 'https', hostname: 'graphql.org' },
-      { protocol: 'https', hostname: 'jestjs.io' },
-      { protocol: 'https', hostname: 'laravel.com' },
-      { protocol: 'https', hostname: 'www.mysql.com' },
-      { protocol: 'https', hostname: 'www.postgresql.org' },
-      { protocol: 'https', hostname: 'openlayers.org' },
-      { protocol: 'https', hostname: 'leafletjs.com' },
+    domains: [
+      'reactjs.org',
+      'www.redux.js.org',
+      'github.com',
+      'www.typescriptlang.org',
+      'www.w3.org',
+      'www.sass-lang.com',
+      'www.tailwindcss.com',
+      'nextjs.org',
+      'www.graphql.org',
+      'reactnative.dev',
+      'jestjs.io',
+      'testing-library.com',
+      'www.laravel.com',
+      'nodejs.org',
+      'www.mysql.com',
+      'www.postgresql.org',
+      'openlayers.org',
+      'leafletjs.com',
+      'upload.wikimedia.org',
     ],
   },
 };
