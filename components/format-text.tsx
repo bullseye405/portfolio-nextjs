@@ -6,7 +6,7 @@ export const formatText = (text: string) => {
 
   return paragraphs.map((paragraph, index) => (
     <p
-      className="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed"
+      className="mb-4 text-gray-700 leading-relaxed"
       key={index}
     >
       {paragraph}
