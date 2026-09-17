@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, LucideProps, Twitter, Youtube } from 'lucide-react';
+import { ReactElement } from 'react';
 
 type CommonSocialIcon =
   | 'Twitter'
@@ -10,7 +11,7 @@ type CommonSocialIcon =
 interface SocialIconProps extends LucideProps {
   iconName: CommonSocialIcon | string;
 }
-const SocialIcon = ({ iconName, ...rest }: SocialIconProps): JSX.Element => {
+const SocialIcon = ({ iconName, ...rest }: SocialIconProps): ReactElement => {
   switch (iconName) {
     case 'Twitter':
       return <Twitter {...rest} />;
