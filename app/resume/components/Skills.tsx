@@ -107,8 +107,8 @@ const skills = [
   },
 
   {
-    name: 'API Gateway',
-    url: 'https://aws.amazon.com/api-gateway/',
+    name: 'AWS Services',
+    url: 'https://aws.amazon.com',
     logo_url:
       'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
     order: 19,
